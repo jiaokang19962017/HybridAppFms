@@ -10,17 +10,19 @@
 
 	<body>
 		<script src="../js/mui.min.js"></script>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init()	
 		</script>
+		<script src="../myjs/myvue.js" type="text/javascript" charset="utf-8"></script>
 		<header class="mui-bar mui-bar-nav">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 		<h1 class="mui-title">院级筛查</h1>
 	</header>
 	<div class="mui-content">
 		<ul class="mui-table-view" style="margin-top: 0px">
-		    <li class="mui-table-view-cell mui-collapse">
-		        <a class="mui-navigate-right" href="#">面板1</a>
+		    <li id="tes" class="mui-table-view-cell mui-collapse">
+		        <a class="mui-navigate-right" href="#">{{ message }}</a>
 		        <div class="mui-collapse-content">
 		            <p>面板1子内容</p>
 		        </div>
