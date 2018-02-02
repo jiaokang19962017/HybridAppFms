@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8">
+	
+		</script>
+		<script type="text/javascript">
+					mui.init()
+			mui.plusReady(function(){    //死坑,任何事件要写到mui.ready()里面
+		var onc = document.getElementById('btn');
+		var abm = document.getElementById('aboutme');
+		
+		onc.addEventListener("tap",function(){
+			 mui.openWindow({
+			 	url:'ScreenPage/HospitalScreen.html',
+				id:'ScreenPage/HospitalScreen.html'
+			 })
+		})
+		abm.addEventListener("tap",function(){
+			mui.openWindow({
+				url:'AboutMe/aboutMe.html',
+				id:'AboutMe/aboutMe.html'
+			});
+		})
+  		 
+	});
+		</script>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		                <h1 class="mui-title">随访管理系统</h1>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+		    		    <a class="mui-tab-item mui-active">
+		    		        <span class="mui-icon iconfont icon-homepage"></span>
+		    		        <span class="mui-tab-label">系统首页</span>
+		    		    </a>
+		    		    <a id="personal" class="mui-tab-item">
+		    		        <span class="mui-icon iconfont icon-mine"></span>
+		    		        <span class="mui-tab-label">个人中心</span>
+		    		    </a>
+		    		</nav>
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		                    <ul class="mui-table-view mui-grid-view mui-grid-9" style="margin-top: 0px;margin-right: 0px;">
+		            <li id="btn" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-activity"></span>
+		                    <div class="mui-media-body">随访筛查</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-createtask"></span>
+		                    <div class="mui-media-body">坐席视图</div></a></li>
+		             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-document"></span>
+		                    <div class="mui-media-body">调查问卷</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-systemprompt"></span>
+		                    <div class="mui-media-body">录音查询</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-businesscard"></span>
+		                    <div class="mui-media-body">客户档案</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-workbench"></span>
+		                    <div class="mui-media-body">随访模板</div></a></li>
+		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-message"></span>
+		                    <div class="mui-media-body">短信发送</div></a></li>
+		           <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-task"></span>
+		                    <div class="mui-media-body">随访计划</div></a></li>
+		           <li id="aboutme" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		                    <span class="mui-icon iconfont icon-prompt"><span class="mui-badge">0.0</span></span>
+		                    <div class="mui-media-body">关于我们</div></a></li>      
+		        </ul> 
+		                </div>
+		            </div>
+		       	 <div class="mui-off-canvas-backdrop"></div>
+		        </div>
+		    </div>
+		    
+	</body>
+
+</html>
