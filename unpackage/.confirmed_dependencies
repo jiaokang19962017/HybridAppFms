@@ -1,8 +1,9 @@
 {
-  "index.html": {
-    "refer": [
-      "AboutMe/aboutMe.html",
-      "ScreenPage/HospitalScreen.html"
-    ]
-  }
+	"index.html": {
+		"refer": [
+			"AboutMe/aboutMe.html",
+			"ScreenPage/HospitalScreen.html",
+			"ajax.html"
+		]
+	}
 }

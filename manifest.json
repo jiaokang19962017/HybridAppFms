@@ -199,7 +199,8 @@
 				"resources": [],
 				"refer": [
 					"AboutMe/aboutMe.html",
-					"ScreenPage/HospitalScreen.html"
+					"ScreenPage/HospitalScreen.html",
+					"ajax.html"
 				],
 				"priority": 0
 			}
