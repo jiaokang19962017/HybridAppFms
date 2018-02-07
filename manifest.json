@@ -200,7 +200,8 @@
 				"refer": [
 					"AboutMe/aboutMe.html",
 					"ScreenPage/HospitalScreen.html",
-					"ajax.html"
+					"ajax.html",
+					"AjaxServlet.html"
 				],
 				"priority": 0
 			}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+			<h1 class="mui-title">ajax连接本地servlet服务</h1>
+		</header>
+		<div class="mui-content">
+			<button id="btnajax" class="mui-btn-success">测试ajax</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		mui.init()
+		mui.plusReady(function() {
+			var btnajax = document.getElementById('btnajax');
+			btnajax.addEventListener("tap", function() {
+				mui.ajax({
+					url: 'http://www.kuaidi100.com/query',
+					data:{
+						type:'yuantong',
+						postid:'11111111111'
+					},
+					async: true, // 异步 || 同步
+					dataType: 'text',
+					type: 'post',
+					timeout: 10000,
+					success: function(data) {
+						// 请求成功
+						alert(data);
+					},
+					error: function(xhr, type, errorThrown) {
+						// 请求失败
+						console.log(errorThrown, '提示');
+						console.log(type, '提示')
+					}
+				});
+			});
+		})
+	</script>
+
+</html>

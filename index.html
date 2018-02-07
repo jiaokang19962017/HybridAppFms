@@ -18,7 +18,7 @@
 			mui.plusReady(function(){    //死坑,任何事件要写到mui.ready()里面
 		var onc = document.getElementById('btn');
 		var abm = document.getElementById('aboutme');
-		
+		var bfv = document.getElementById('btnfmsview')
 		onc.addEventListener("tap",function(){
 			 mui.openWindow({
 			 	url:'ajax.html',
@@ -30,6 +30,12 @@
 				url:'AboutMe/aboutMe.html',
 				id:'AboutMe/aboutMe.html'
 			});
+		})
+		bfv.addEventListener("tap",function(){
+			mui.openWindow({
+				url:'AjaxServlet.html',
+				id:'AjaxServlet.html'
+			})
 		})
   		 
 	});
@@ -71,7 +77,7 @@
 		            <li id="btn" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon iconfont icon-activity"></span>
 		                    <div class="mui-media-body">随访筛查</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+		            <li id="btnfmsview" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon iconfont icon-createtask"></span>
 		                    <div class="mui-media-body">坐席视图</div></a></li>
 		             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
